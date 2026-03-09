@@ -5,9 +5,9 @@
 [![Version](https://img.shields.io/github/v/release/first-fluke/fullstack-starter?label=version)](https://github.com/first-fluke/fullstack-starter/releases)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/first-fluke/fullstack-starter)
 
-[English](./README.md) | 한국어
+[English](../README.md) | 한국어 | [简体中文](./README.cn.md) | [日本語](./README.jp.md)
 
-> 템플릿 버전은 [Release Please](https://github.com/googleapis/release-please)로 관리됩니다 — [CHANGELOG.md](./CHANGELOG.md)에서 릴리즈 히스토리를 확인하세요.
+> 템플릿 버전은 [Release Please](https://github.com/googleapis/release-please)로 관리됩니다 — [CHANGELOG.md](../CHANGELOG.md)에서 릴리즈 히스토리를 확인하세요.
 
 실무에 바로 적용 가능한 풀스택 모노레포 템플릿입니다. Next.js 16, FastAPI, Flutter, GCP 인프라가 통합되어 있습니다.
 
@@ -72,9 +72,9 @@ graph TB
 | **CI/CD** | GitHub Actions, Workload Identity Federation |
 | **도구 관리** | mise (Node, Python, Flutter, Terraform 버전 통합) |
 
-> **[왜 이 기술 스택인가?](./docs/WHY.ko.md)** — 기술 선정 배경 상세 설명
+> **[왜 이 기술 스택인가?](./WHY.ko.md)** — 기술 선정 배경 상세 설명
 
-![Fullstack](./docs/fullstack.jpg)
+![Fullstack](./fullstack.jpg)
 
 ## AI 에이전트 오케스트레이션
 
@@ -116,7 +116,7 @@ graph TB
 | **도메인 에이전트** | 프론트엔드, 백엔드, 모바일, 인프라 에이전트가 우선순위별 병렬 실행 |
 | **QA 에이전트** | 보안(OWASP), 성능, 접근성(WCAG 2.1 AA) 검토 |
 
-> 전체 오케스트레이션 워크플로우는 [`.agent/workflows/coordinate.md`](.agent/workflows/coordinate.md)를 참조하세요.
+> 전체 오케스트레이션 워크플로우는 [`../.agent/workflows/coordinate.md`](../.agent/workflows/coordinate.md)를 참조하세요.
 
 ## 빠른 시작
 
@@ -473,9 +473,9 @@ bundle exec fastlane ios testflight_deploy  # TestFlight 배포
 
 ## 문서
 
-- [빌드 가이드](.agent/rules/build-guide.md)
-- [린트 & 포맷 가이드](.agent/rules/lint-format-guide.md)
-- [테스트 가이드](.agent/rules/test-guide.md)
+- [빌드 가이드](../.agent/rules/build-guide.md)
+- [린트 & 포맷 가이드](../.agent/rules/lint-format-guide.md)
+- [테스트 가이드](../.agent/rules/test-guide.md)
 
 ## 라이선스
 
