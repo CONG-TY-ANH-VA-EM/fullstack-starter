@@ -469,6 +469,8 @@ bundle exec fastlane ios testflight_deploy  # TestFlight 배포
 - `.agent/rules/`: AI 에이전트용 가이드라인
 - `.serena/`: Serena MCP 설정
 
+> [oh-my-ag](https://github.com/first-fluke/oh-my-ag)를 사용하면 AI 코딩 에이전트의 생산성을 극대화할 수 있습니다.
+
 ## 문서
 
 - [빌드 가이드](.agent/rules/build-guide.md)

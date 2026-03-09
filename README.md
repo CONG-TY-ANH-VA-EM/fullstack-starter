@@ -469,6 +469,8 @@ This template is designed to work with AI coding agents (Gemini, Claude, etc.).
 - `.agent/rules/` - Guidelines for AI agents
 - `.serena/` - Serena MCP configuration
 
+> Try [oh-my-ag](https://github.com/first-fluke/oh-my-ag) to maximize productivity with AI coding agents.
+
 ## Documentation
 
 - [Build Guide](.agent/rules/build-guide.md)
