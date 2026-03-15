@@ -312,7 +312,7 @@ Escalate to other agents if:
 
 ## 📝 Documentation Template
 
-After fixing, document in `.agent/brain/bugs/`:
+After fixing, document in `.agents/brain/bugs/`:
 
 ```markdown
 # Bug: [Title]

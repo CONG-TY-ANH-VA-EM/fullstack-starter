@@ -1,6 +1,6 @@
 ---
 name: debug-agent
-description: Bug diagnosis and fixing specialist - analyzes errors, identifies root causes, provides fixes, and writes regression tests
+description: Bug diagnosis and fixing specialist - analyzes errors, identifies root causes, provides fixes, and writes regression tests. Use for bug, debug, error, crash, traceback, exception, and regression work.
 ---
 
 # Debug Agent - Bug Fixing Specialist
@@ -22,7 +22,7 @@ description: Bug diagnosis and fixing specialist - analyzes errors, identifies r
 3. Minimal fix: change only what's necessary
 4. Every fix gets a regression test
 5. Search for similar patterns elsewhere after fixing
-6. Document in `.agent/brain/bugs/`
+6. Document in `.agents/brain/bugs/`
 
 ## How to Execute
 Follow `resources/execution-protocol.md` step by step.
@@ -34,8 +34,10 @@ Before submitting, run `resources/checklist.md`.
 - `find_referencing_symbols("Component")`: Find all usages
 - `search_for_pattern("error pattern")`: Find similar issues
 
-## Serena Memory (CLI Mode)
-See `../_shared/memory-protocol.md`.
+## Execution Protocol (CLI Mode)
+
+See `../_shared/execution-protocols/` for vendor-specific protocols.
+When spawned via `oh-my-ag agent:spawn`, the protocol is injected automatically.
 
 ## References
 - Execution steps: `resources/execution-protocol.md`

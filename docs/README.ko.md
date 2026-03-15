@@ -5,7 +5,7 @@
 [![Version](https://img.shields.io/github/v/release/first-fluke/fullstack-starter?label=version)](https://github.com/first-fluke/fullstack-starter/releases)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/first-fluke/fullstack-starter)
 
-[English](../README.md) | 한국어 | [简体中文](./README.cn.md) | [日本語](./README.jp.md)
+[English](../README.md) | 한국어 | [简体中文](./README.cn.md) | [日本語](./README.jp.md) | [Português](./README.pt.md)
 
 > 템플릿 버전은 [Release Please](https://github.com/googleapis/release-please)로 관리됩니다 — [CHANGELOG.md](../CHANGELOG.md)에서 릴리즈 히스토리를 확인하세요.
 

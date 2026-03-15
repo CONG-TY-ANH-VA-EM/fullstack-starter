@@ -4,7 +4,7 @@ description: Initial setup workflow — verify CLI installations, check MCP conn
 
 # MANDATORY RULES — VIOLATION IS FORBIDDEN
 
-- **Response language follows `language` setting in `.agent/config/user-preferences.yaml` if configured.**
+- **Response language follows `language` setting in `.agents/config/user-preferences.yaml` if configured.**
 - **NEVER skip steps.** Execute from Step 1 in order.
 - **Read configuration files BEFORE making changes.**
 
@@ -12,7 +12,7 @@ description: Initial setup workflow — verify CLI installations, check MCP conn
 
 ## Step 1: Language Settings
 
-1. Check if `.agent/config/user-preferences.yaml` exists
+1. Check if `.agents/config/user-preferences.yaml` exists
 2. If not:
    - Ask user for preferred language (ko, en, ja, zh, ...)
    - Create default configuration file
@@ -55,7 +55,7 @@ Provide installation guide for missing CLIs:
 
 ## Step 3: MCP Connection Status
 
-1. Check `.agent/mcp.json` existence and configuration
+1. Check `.agents/mcp.json` existence and configuration
 2. Check MCP settings for each CLI:
    - Gemini CLI: `~/.gemini/settings.json`
    - Claude CLI: `~/.claude.json` or `--mcp-config`
@@ -154,7 +154,7 @@ serena-mcp-server --port 12341
   "mcpServers": {
     "serena": {
       "command": "npx",
-      "args": ["-y", "oh-my-ag@latest", "bridge", "http://localhost:12341/sse"],
+      "args": ["-y", "oh-my-agent@latest", "bridge", "http://localhost:12341/sse"],
       "disabled": false
     }
   }
@@ -200,7 +200,7 @@ serena-mcp-server --port 12341
    Do you want to change? (e.g., "backend to codex", "pm to claude")
    ```
 
-3. Update `.agent/config/user-preferences.yaml` if changes requested
+3. Update `.agents/config/user-preferences.yaml` if changes requested
 
 ---
 
@@ -235,4 +235,52 @@ If Antigravity IDE with SSE mode:
 💡 For Antigravity IDE (SSE mode):
 - Start Serena server: serena-mcp-server --port 12341
 - Restart IDE to apply changes
+```
+
+---
+
+## Step 6: Ask About Starring Repository
+
+First, check if `gh` CLI is available and authenticated:
+
+```bash
+gh auth status &>/dev/null
+```
+
+### If gh is available and authenticated
+
+**Before prompting, check if the repository is already starred:**
+
+```bash
+gh api user/starred/first-fluke/oh-my-ag &>/dev/null
+```
+
+**If already starred (exit code 0):**
+
+- Skip the prompt entirely
+
+**If NOT starred (exit code non-zero):**
+
+> **Ask the user**: "If you're enjoying oh-my-agent, would you like to support the project by starring it on GitHub?"
+>
+> **Options:**
+>
+> 1. Yes, star it!
+> 2. Maybe later
+
+If user chooses "Yes, star it!":
+
+```bash
+gh api -X PUT /user/starred/first-fluke/oh-my-ag 2>/dev/null && echo "Thanks for starring! ⭐" || true
+```
+
+**Note:** Fail silently if the API call doesn't work - never block setup completion.
+
+### If gh is NOT available or not authenticated
+
+```bash
+echo ""
+echo "If you enjoy oh-my-agent, consider starring the repo:"
+echo "  https://github.com/first-fluke/oh-my-ag"
+echo ""
 ```

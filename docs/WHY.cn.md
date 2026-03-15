@@ -1,6 +1,6 @@
 # 为什么选择这个技术栈？
 
-[English](./WHY.md) | [한국어](./WHY.ko.md) | 简体中文 | [日本語](./WHY.jp.md)
+[English](./WHY.md) | [한국어](./WHY.ko.md) | 简体中文 | [日本語](./WHY.jp.md) | [Português](./WHY.pt.md)
 
 本文档解释了这个全栈启动模板中每项技术选择的原因。
 

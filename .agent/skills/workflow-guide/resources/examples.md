@@ -21,10 +21,10 @@ Step 3: Monitor progress
   - Verify API contracts align between backend/frontend
 
 Step 4: Spawn Priority 2 after P1 completes
-  .agent/skills/orchestrator/scripts/spawn-agent.sh frontend "TODO List UI" ./frontend
+  .agents/skills/orchestrator/scripts/spawn-agent.sh frontend "TODO List UI" ./frontend
 
 Step 5: Spawn Priority 3
-  .agent/skills/orchestrator/scripts/spawn-agent.sh qa "Security + Performance review" .
+  .agents/skills/orchestrator/scripts/spawn-agent.sh qa "Security + Performance review" .
 
 Step 6: Address QA findings
   - Re-spawn agents for CRITICAL/HIGH issues

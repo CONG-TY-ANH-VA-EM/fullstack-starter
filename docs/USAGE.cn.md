@@ -1,6 +1,6 @@
 # Antigravity 多智能体技能使用方法
 
-[English](./USAGE.md) | [한국어](./USAGE.ko.md) | 简体中文 | [日本語](./USAGE.jp.md)
+[English](./USAGE.md) | [한국어](./USAGE.ko.md) | 简体中文 | [日本語](./USAGE.jp.md) | [Português](./USAGE.pt.md)
 
 ## 快速开始
 

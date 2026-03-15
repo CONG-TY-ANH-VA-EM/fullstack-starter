@@ -1,6 +1,6 @@
 # 无状态令牌认证架构
 
-[English](./AUTH.md) | [한국어](./AUTH.ko.md) | 简体中文 | [日本語](./AUTH.jp.md)
+[English](./AUTH.md) | [한국어](./AUTH.ko.md) | 简体中文 | [日本語](./AUTH.jp.md) | [Português](./AUTH.pt.md)
 
 ## 概述
 

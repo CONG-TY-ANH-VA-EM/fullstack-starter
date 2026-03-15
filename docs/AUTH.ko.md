@@ -1,6 +1,6 @@
 # Stateless Token Authentication Architecture
 
-[English](./AUTH.md) | [한국어](./AUTH.ko.md) | [简体中文](./AUTH.cn.md) | [日本語](./AUTH.jp.md)
+[English](./AUTH.md) | [한국어](./AUTH.ko.md) | [简体中文](./AUTH.cn.md) | [日本語](./AUTH.jp.md) | [Português](./AUTH.pt.md)
 
 ## 개요
 

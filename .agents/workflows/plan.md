@@ -4,7 +4,7 @@ description: PM planning workflow — analyze requirements, select tech stack, d
 
 # MANDATORY RULES — VIOLATION IS FORBIDDEN
 
-- **Response language follows `language` setting in `.agent/config/user-preferences.yaml` if configured.**
+- **Response language follows `language` setting in `.agents/config/user-preferences.yaml` if configured.**
 - **NEVER skip steps.** Execute from Step 1 in order.
 - **You MUST use MCP tools throughout the workflow.**
   - Use code analysis tools (`get_symbols_overview`, `find_symbol`, `search_for_pattern`) to analyze the existing codebase.
@@ -40,7 +40,7 @@ If an existing codebase exists, use MCP code analysis tools to scan:
 Design API contracts between frontend/mobile and backend. Per endpoint:
 - Method, path, request/response schemas
 - Auth requirements, error responses
-- Save to `.agent/skills/_shared/api-contracts/`.
+- Save to `.agents/skills/_shared/api-contracts/`.
 
 ---
 
@@ -65,7 +65,8 @@ Present the full plan: task list, priority tiers, dependency graph, agent assign
 
 // turbo
 Save the approved plan:
-1. `.agent/plan.json`
+1. `.agents/plan.json`
 2. Use memory write tool to record plan summary.
+3. For complex plans (Medium/Complex per `_shared/difficulty-guide.md`), also create an execution plan artifact in `docs/exec-plans/active/` — see `/exec-plan` workflow for the template and lifecycle.
 
 The plan is now ready for `/coordinate` or `/orchestrate` to execute.

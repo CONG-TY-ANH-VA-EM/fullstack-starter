@@ -2,7 +2,7 @@
 # Select your preferred CLI vendor for sub-agent execution
 
 # Default CLI vendor (used as fallback when user-preferences.yaml is not configured)
-# For per-agent CLI mapping, see: .agent/config/user-preferences.yaml
+# For per-agent CLI mapping, see: .agents/config/user-preferences.yaml
 active_vendor: gemini
 
 # Vendor configurations
@@ -60,7 +60,7 @@ vendors:
 # SubAgent execution settings
 execution:
   # Directory for subagent results
-  results_dir: ".agent/results"
+  results_dir: ".agents/results"
   # Timeout in seconds (0 = no timeout)
   timeout: 600
   # Log level: debug, info, warn, error

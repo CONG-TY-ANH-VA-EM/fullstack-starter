@@ -5,7 +5,7 @@
 [![Version](https://img.shields.io/github/v/release/first-fluke/fullstack-starter?label=version)](https://github.com/first-fluke/fullstack-starter/releases)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/first-fluke/fullstack-starter)
 
-[English](../README.md) | [한국어](./README.ko.md) | [简体中文](./README.cn.md) | 日本語
+[English](../README.md) | [한국어](./README.ko.md) | [简体中文](./README.cn.md) | 日本語 | [Português](./README.pt.md)
 
 > テンプレートのバージョン管理は [Release Please](https://github.com/googleapis/release-please) により行われます — リリース履歴は [CHANGELOG.md](../CHANGELOG.md) をご覧ください。
 

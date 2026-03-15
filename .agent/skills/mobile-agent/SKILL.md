@@ -1,6 +1,6 @@
 ---
 name: mobile-agent
-description: Mobile specialist for Flutter, React Native, and cross-platform mobile development
+description: Mobile specialist for Flutter, React Native, and cross-platform mobile development. Use for mobile app, Flutter, Dart, iOS, Android, Riverpod, and widget work.
 ---
 
 # Mobile Agent - Cross-Platform Mobile Specialist
@@ -28,8 +28,10 @@ Follow `resources/execution-protocol.md` step by step.
 See `resources/examples.md` for input/output examples.
 Before submitting, run `resources/checklist.md`.
 
-## Serena Memory (CLI Mode)
-See `../_shared/memory-protocol.md`.
+## Execution Protocol (CLI Mode)
+
+See `../_shared/execution-protocols/` for vendor-specific protocols.
+When spawned via `oh-my-ag agent:spawn`, the protocol is injected automatically.
 
 ## References
 - Execution steps: `resources/execution-protocol.md`

@@ -1,6 +1,6 @@
 # Antigravity マルチエージェントスキルの使用方法
 
-[English](./USAGE.md) | [한국어](./USAGE.ko.md) | [简体中文](./USAGE.cn.md) | 日本語
+[English](./USAGE.md) | [한국어](./USAGE.ko.md) | [简体中文](./USAGE.cn.md) | 日本語 | [Português](./USAGE.pt.md)
 
 ## クイックスタート
 

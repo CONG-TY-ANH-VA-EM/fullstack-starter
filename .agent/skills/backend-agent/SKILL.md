@@ -1,6 +1,6 @@
 ---
 name: backend-agent
-description: Backend specialist for APIs, databases, authentication using FastAPI with clean architecture (Repository/Service/Router pattern)
+description: Backend specialist for APIs, databases, authentication using FastAPI with clean architecture (Repository/Service/Router pattern). Use for API, endpoint, REST, database, server, migration, and auth work.
 ---
 
 # Backend Agent - API & Server Specialist
@@ -54,6 +54,9 @@ Router (HTTP) → Service (Business Logic) → Repository (Data Access) → Mode
 5. **JWT + bcrypt for auth**; rate limit auth endpoints
 6. **Async/await consistently**; type hints on all signatures
 7. **Custom exceptions** via `src/lib/exceptions.py` (not raw HTTPException)
+8. **Explicit ORM loading strategy**: do not rely on default relation loading when query shape matters
+9. **Explicit transaction boundaries**: group one business operation into one request/service-scoped unit of work
+10. **Safe ORM lifecycle**: do not share mutable ORM session/entity manager/client objects across concurrent work unless the ORM explicitly supports it
 
 ## Dependency Injection
 
@@ -82,11 +85,13 @@ async def get_recipe(
 
 Follow `resources/execution-protocol.md` step by step.
 See `resources/examples.md` for input/output examples.
+Use `resources/orm-reference.md` when the task involves ORM query performance, relationship loading, transactions, session/client lifecycle, or N+1 analysis.
 Before submitting, run `resources/checklist.md`.
 
-## Serena Memory (CLI Mode)
+## Execution Protocol (CLI Mode)
 
-See `../_shared/memory-protocol.md`.
+See `../_shared/execution-protocols/` for vendor-specific protocols.
+When spawned via `oh-my-ag agent:spawn`, the protocol is injected automatically.
 
 ## References
 
@@ -94,6 +99,7 @@ See `../_shared/memory-protocol.md`.
 - Code examples: `resources/examples.md`
 - Code snippets: `resources/snippets.md`
 - Checklist: `resources/checklist.md`
+- ORM reference: `resources/orm-reference.md`
 - Error recovery: `resources/error-playbook.md`
 - Tech stack: `resources/tech-stack.md`
 - API template: `resources/api-template.py`

@@ -4,7 +4,7 @@ description: Manage MCP tools with natural language commands — list, enable, d
 
 # MANDATORY RULES — VIOLATION IS FORBIDDEN
 
-- **Response language follows `language` setting in `.agent/config/user-preferences.yaml` if configured.**
+- **Response language follows `language` setting in `.agents/config/user-preferences.yaml` if configured.**
 - **NEVER skip steps.** Execute from Step 1 in order.
 - **Read configuration files BEFORE making changes.**
 
@@ -12,7 +12,7 @@ description: Manage MCP tools with natural language commands — list, enable, d
 
 ## Step 1: Show Current Status
 
-1. Read `.agent/mcp.json` (project configuration)
+1. Read `.agents/mcp.json` (project configuration)
 2. Read `~/.gemini/settings.json` if exists (Gemini CLI global settings) — optional
 3. Display status for each MCP server:
    - `available_tools: null` → "All enabled (no restrictions)"
@@ -75,7 +75,7 @@ Parse natural language commands:
    Apply changes? (Y/N)
    ```
 
-2. **After user confirmation**, modify `.agent/mcp.json`
+2. **After user confirmation**, modify `.agents/mcp.json`
 
 3. **Completion message:**
    ```

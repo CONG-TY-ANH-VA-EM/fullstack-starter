@@ -1,6 +1,6 @@
 # ステートレストークン認証アーキテクチャ
 
-[English](./AUTH.md) | [한국어](./AUTH.ko.md) | [简体中文](./AUTH.cn.md) | 日本語
+[English](./AUTH.md) | [한국어](./AUTH.ko.md) | [简体中文](./AUTH.cn.md) | 日本語 | [Português](./AUTH.pt.md)
 
 ## 概要
 

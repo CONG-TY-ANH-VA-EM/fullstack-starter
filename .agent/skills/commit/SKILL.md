@@ -1,6 +1,6 @@
 ---
 name: commit
-description: Create git commits following Conventional Commits specification with project-specific branch naming rules
+description: Create git commits following Conventional Commits specification with project-specific branch naming rules. Use for commit message generation, changelog, and versioning.
 ---
 
 # Commit Skill - Conventional Commits
@@ -10,7 +10,7 @@ description: Create git commits following Conventional Commits specification wit
 - When `/commit` command is invoked
 
 ## Configuration
-Project-specific settings: `.agent/skills/commit/config/commit-config.yaml`
+Project-specific settings: `.agents/skills/commit/config/commit-config.yaml`
 
 ## Commit Types
 | Type | Description | Branch Prefix |
@@ -53,8 +53,8 @@ If changed files span multiple features/domains, **split commits by feature**.
 **Example:**
 ```
 # Changed files:
-.agent/workflows/*.md (7 files)     → fix(workflows): ...
-.agent/skills/**/*.md (4 files)     → fix(skills): ...
+.agents/workflows/*.md (7 files)     → fix(workflows): ...
+.agents/skills/**/*.md (4 files)     → fix(skills): ...
 USAGE.md, USAGE-ko.md               → docs: ...
 
 # Split into 3 commits
@@ -87,9 +87,10 @@ Use changed module/component as scope:
 - Lowercase first letter
 - No trailing period
 
-### Step 5: Confirm with User
+### Step 5: Execute Commit
+Show the commit message and proceed immediately without asking for confirmation:
 ```
-📝 Commit message preview:
+📝 Committing:
 
 feat(orchestrator): add multi-CLI agent mapping support
 
@@ -98,12 +99,8 @@ feat(orchestrator): add multi-CLI agent mapping support
 - Update memory schema with CLI field
 
 Co-Authored-By: First Fluke <our.first.fluke@gmail.com>
-
-Proceed with this commit? (Y/N/Edit)
 ```
 
-### Step 6: Execute Commit
-After user confirmation:
 ```bash
 git add <specific-files>
 git commit -m "<message>"
@@ -114,7 +111,6 @@ git commit -m "<message>"
 - Guide: `resources/conventional-commits.md`
 
 ## Important Notes
-- **NEVER** commit without user confirmation
 - **NEVER** use `git add -A` or `git add .` without explicit permission
 - **NEVER** commit files that may contain secrets (.env, credentials, etc.)
 - **ALWAYS** use specific file names when staging

@@ -4,7 +4,7 @@ description: Coordinate multiple agents for a complex multi-domain project using
 
 # MANDATORY RULES — VIOLATION IS FORBIDDEN
 
-- **Response language follows `language` setting in `.agent/config/user-preferences.yaml` if configured.**
+- **Response language follows `language` setting in `.agents/config/user-preferences.yaml` if configured.**
 - **NEVER skip steps.** Execute from Step 0 in order. Explicitly report completion of each step to the user before proceeding to the next.
 - **You MUST use MCP tools throughout the entire workflow.** This is NOT optional.
   - Use code analysis tools (`get_symbols_overview`, `find_symbol`, `find_referencing_symbols`, `search_for_pattern`) for code exploration.
@@ -12,16 +12,16 @@ description: Coordinate multiple agents for a complex multi-domain project using
   - Memory path: configurable via `memoryConfig.basePath` (default: `.serena/memories`)
   - Tool names: configurable via `memoryConfig.tools` in `mcp.json`
   - Do NOT use raw file reads or grep as substitutes. MCP tools are the primary interface for code and memory operations.
-- **Read the workflow-guide BEFORE starting.** Read `.agent/skills/workflow-guide/SKILL.md` and follow its Core Rules.
-- **Follow the context-loading guide.** Read `.agent/skills/_shared/context-loading.md` and load only task-relevant resources.
+- **Read the workflow-guide BEFORE starting.** Read `.agents/skills/workflow-guide/SKILL.md` and follow its Core Rules.
+- **Follow the context-loading guide.** Read `.agents/skills/_shared/context-loading.md` and load only task-relevant resources.
 
 ---
 
 ## Step 0: Preparation (DO NOT SKIP)
 
-1. Read `.agent/skills/workflow-guide/SKILL.md` and confirm Core Rules.
-2. Read `.agent/skills/_shared/context-loading.md` for resource loading strategy.
-3. Read `.agent/skills/_shared/memory-protocol.md` for memory protocol.
+1. Read `.agents/skills/workflow-guide/SKILL.md` and confirm Core Rules.
+2. Read `.agents/skills/_shared/context-loading.md` for resource loading strategy.
+3. Read `.agents/skills/_shared/memory-protocol.md` for memory protocol.
 4. Record session start using memory write tool:
    - Create `session-coordinate.md` in the memory base path
    - Include: session start time, user request summary.
@@ -47,7 +47,7 @@ Activate PM Agent to:
 1. Analyze requirements.
 2. Define API contracts.
 3. Create a prioritized task breakdown.
-4. Save plan to `.agent/plan.json`.
+4. Save plan to `.agents/plan.json`.
 5. Use memory write tool to record plan completion.
 
 ---

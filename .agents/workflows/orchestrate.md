@@ -4,7 +4,7 @@ description: Automated CLI-based parallel agent execution — spawn subagents vi
 
 # MANDATORY RULES — VIOLATION IS FORBIDDEN
 
-- **Response language follows `language` setting in `.agent/config/user-preferences.yaml` if configured.**
+- **Response language follows `language` setting in `.agents/config/user-preferences.yaml` if configured.**
 - **NEVER skip steps.** Execute from Step 0 in order. Explicitly report completion of each step before proceeding.
 - **You MUST use MCP tools throughout the entire workflow.** This is NOT optional.
   - Use code analysis tools (`get_symbols_overview`, `find_symbol`, `find_referencing_symbols`, `search_for_pattern`) for code exploration.
@@ -18,15 +18,15 @@ description: Automated CLI-based parallel agent execution — spawn subagents vi
 
 ## Step 0: Preparation (DO NOT SKIP)
 
-1. Read `.agent/skills/workflow-guide/SKILL.md` and confirm Core Rules.
-2. Read `.agent/skills/_shared/context-loading.md` for resource loading strategy.
-3. Read `.agent/skills/_shared/memory-protocol.md` for memory protocol.
+1. Read `.agents/skills/workflow-guide/SKILL.md` and confirm Core Rules.
+2. Read `.agents/skills/_shared/context-loading.md` for resource loading strategy.
+3. Read `.agents/skills/_shared/memory-protocol.md` for memory protocol.
 
 ---
 
 ## Step 1: Load or Create Plan
 
-Check if `.agent/plan.json` exists.
+Check if `.agents/plan.json` exists.
 
 - If yes: load it and proceed to Step 2.
 - If no: ask the user to run `/plan` first, or ask them to describe the tasks to execute.
@@ -39,7 +39,7 @@ Check if `.agent/plan.json` exists.
 // turbo
 
 1. 설정 파일 로드:
-   - `.agent/config/user-preferences.yaml` (언어, CLI 매핑)
+   - `.agents/config/user-preferences.yaml` (언어, CLI 매핑)
 2. CLI 매핑 현황 표시:
 
    ```
@@ -87,7 +87,7 @@ Also use memory read tool to poll `progress-{agent}.md` for logic updates.
 For each completed agent, run automated verification:
 
 ```
-bash .agent/skills/_shared/verify.sh {agent-type} {workspace}
+bash .agents/skills/_shared/verify.sh {agent-type} {workspace}
 ```
 
 - PASS (exit 0): accept result.
